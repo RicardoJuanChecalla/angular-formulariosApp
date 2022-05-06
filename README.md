@@ -1,27 +1,48 @@
 # FormulariosApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
+ng new formulariosApp
 
-## Development server
+ng serve -o
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ng g m shared
 
-## Code scaffolding
+ng g c shared/sidemenu --skipTests -is
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ng g s shared/validator/validator --skipTests
 
-## Build
+ng g s shared/validator/emailValidator --skipTests
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+ng g m template --routing
 
-## Running unit tests
+ng g m reactive --routing
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+ng g m auth --routing
 
-## Running end-to-end tests
+ng g c reactive/basicos --skipTests -is
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+ng g c reactive/dinamicos --skipTests -is
 
-## Further help
+ng g c reactive/switches --skipTests -is
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+ng g c template/basicos --skipTests -is
+
+ng g c template/dinamicos --skipTests -is
+
+ng g c template/switches --skipTests -is
+
+ng g c auth/login --skipTests -is
+
+ng g c auth/register --skipTests -is
+
+https://getbootstrap.com/
+
+https://angular.io/guide/reactive-forms
+
+https://www.npmjs.com/package/json-server
+
+npm install -g json-server
+
+json-server --watch db.json
+
+
+npm install

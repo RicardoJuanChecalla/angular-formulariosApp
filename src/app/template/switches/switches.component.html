@@ -1,0 +1,78 @@
+<h2>Template: Switches</h2>
+<hr>
+<form #miFormulario="ngForm">
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Género</label>
+        <div class="col-sm-9">
+            <div class="form-check">
+                <input class="form-check-input" 
+                    type="radio" name="radioGenero" 
+                    value="M"
+                    [(ngModel)]="persona.genero"
+                    id="masculino"
+                    required="">
+                <label class="form-check-label" for="masculino">
+                  Masculino
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" 
+                    type="radio" name="radioGenero" 
+                    value="F"
+                    [(ngModel)]="persona.genero"
+                    id="femenino"
+                    required="">
+                <label class="form-check-label" for="femenino">
+                  Femenino
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Notificaciones</label>
+        <div class="col-sm-9">
+            <div class="form-check form-switch mt-2">
+                <input class="form-check-input" 
+                    type="checkbox" 
+                    [(ngModel)]="persona.notificaciones"
+                    name="notificaciones"
+                    id="flexSwitchCheckChecked">
+                <label class="form-check-label" 
+                    for="flexSwitchCheckChecked">Quiero recibir notificaciones</label>
+            </div>
+        </div>
+    </div>    
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label"></label>
+        <div class="col-sm-9">
+            <div class="form-check">
+                <input class="form-check-input" 
+                    type="checkbox" 
+                    name="terminosYCondiciones"
+                    [(ngModel)]="terminosYCondiciones"
+                    id="defaultCheck1"
+                    required>
+                <label class="form-check-label" for="defaultCheck1">
+                    Terminos y Condiciones de uso
+                </label>
+            </div>
+        </div>
+    </div>    
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary float-end"
+                [disabled]="miFormulario.invalid">
+                Guardar
+            </button>
+        </div>
+    </div>    
+</form>
+
+<h5>Valor del formulario</h5>
+<pre>{{miFormulario.value | json}}</pre>
+<br>
+<h5>Valid</h5>
+<pre>{{miFormulario.valid}}</pre>
+<br>
+<h5>Condiciones</h5>
+<!-- <pre>{{miFormulario.valid}}</pre> -->
